@@ -1,12 +1,9 @@
 fun main(args: Array<String>) {
-    var boss = Boss()
+    val boss = Boss()
 
-    val weapon = Weapon()
-    weapon.gun = "пистолет"
-    weapon.glock = "глок"
-    boss.weapon = weapon
+    boss.weapon = Weapon("Gun","Glock")
     boss.damage = 10
     boss.health = 50
 
-    println("damage ${boss.damage} health ${boss.health} взял пушку ${weapon.glock}")
+    println("damage ${boss.damage} health ${boss.health} взял пушку ${boss.weapon}")
 }
